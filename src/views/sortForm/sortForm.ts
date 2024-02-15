@@ -34,9 +34,8 @@ function createCheckboxWrapper({ name, label }: CheckBoxWrapperProps) {
   `
 }
 
-
 export const sortForm = `
-<div class="${styles.container}">
+<form class="${styles.form}">
   <div class="${styles.sortType}">
     ${createCheckboxWrapper({ name: "name", label: "Nom" })}
     ${createCheckboxWrapper({ name: "comments", label: "Commentaires" })}
@@ -51,5 +50,5 @@ export const sortForm = `
     ${createOrderButton(createArrowSvg("up"))}
     ${createOrderButton(createArrowSvg("down"))}
   </div>
-</div>
+</form>
 `;
