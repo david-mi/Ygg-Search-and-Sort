@@ -54,7 +54,7 @@
     }
   }
 
-  .sortType {
+  .sortTypes {
     grid-area: sortType;
     display: flex;
     flex-direction: column;

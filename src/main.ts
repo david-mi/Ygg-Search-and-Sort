@@ -2,11 +2,10 @@ import {
   setSearchParamsFromFormData,
   redirect,
   setSortParams,
-  getSearchForms,
-  convertTemplateLiteralToHtmlElement
+  getSearchForms
 } from "./helpers";
 
-import { sortForm } from "./views/sortForm/sortForm";
+import { sortFormElement } from "./views/sortForm/sortForm";
 
 (function () {
   console.log("YGG - Auto sort by seed v1.2.0");
@@ -35,8 +34,6 @@ import { sortForm } from "./views/sortForm/sortForm";
   const mainFormSearchInput = searchForms[0]
 
   const boundingClient = mainFormSearchInput.getBoundingClientRect()
-
-  const sortFormElement = convertTemplateLiteralToHtmlElement(sortForm)
 
   document.body.insertAdjacentElement("afterbegin", sortFormElement)
   sortFormElement.style.top = `${boundingClient.bottom + 10}px`
