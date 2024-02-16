@@ -5,8 +5,8 @@ import { createCheckboxInputWrapperElement } from "./shared/checkboxInputWrapper
 import { sortOrderElement } from "./sortOrder/sortOrder"
 
 export const sortFormElement = createCustomElement(({
-  tagName: "form",
-  attributes: [["class", styles.form]],
+  tagName: "div",
+  attributes: [["class", styles.container]],
   childrens: [
     sortTypesElement,
     createCheckboxInputWrapperElement({ name: "auto_toogle", label: "Auto-toggle" }),
