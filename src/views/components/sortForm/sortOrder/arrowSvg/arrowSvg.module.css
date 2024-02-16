@@ -1,0 +1,15 @@
+.arrowSvg {
+  --clr-svg: var(--ygg-clr-black);
+  width: 32px;
+  height: 32px;
+
+  &.down {
+    rotate: 180deg;
+  }
+
+  & path {
+    stroke: var(--clr-svg);
+    stroke-width: 1px;
+    fill: var(--clr-svg);
+  }
+}

@@ -1,0 +1,13 @@
+.sortOrder {
+  grid-area: sortOrder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--spacing));
+
+  & .orderButton {
+    display: flex;
+    padding: calc(var(--spacing) / 5);
+    background: var(--ygg-clr-gradient);
+  }
+}

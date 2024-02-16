@@ -5,7 +5,7 @@ import {
   getSearchForms
 } from "./helpers";
 
-import { sortFormElement } from "./views/sortForm/sortForm";
+import { sortFormElement } from "./views/components/sortForm/sortForm";
 
 (function () {
   console.log("YGG - Auto sort by seed v1.2.0");
