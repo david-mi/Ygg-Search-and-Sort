@@ -25,3 +25,10 @@ export function setSortParams({ url, sortParams }: { url: URL, sortParams: SortP
 export function redirect(url: URL) {
   window.location.replace(url)
 }
+
+export function convertTemplateLiteralToHtmlElement(templateLiteral: string) {
+  return new DOMParser()
+    .parseFromString(templateLiteral, "text/html")
+    .body
+    .firstChild as HTMLDivElement
+}
