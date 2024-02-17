@@ -1,11 +1,7 @@
 import { convertNumberToPixelString } from "./convertNumberToPixelString"
-import { sortFormElement } from "../components/sortForm/sortForm"
-import { convertPixelStringToNumber } from "./convertPixelStringToNumber"
+import { sortFormWrapper } from "../components/sortForm/sortForm"
 
-export function positionSortFormRelativeToNameInput() {
-  const MARGIN_BLOCK = 15
-  const MARGIN_INLINE = 10
-
+export function positionSortFormWrapperRelativeToNameInput() {
   const { activeElement } = document
   const isFocusingNameInput = (
     activeElement &&
@@ -14,21 +10,19 @@ export function positionSortFormRelativeToNameInput() {
   )
 
   if (isFocusingNameInput) {
-    const { bottom: nameInputBottom, right: nameInputRight } = activeElement.getBoundingClientRect()
+    const nameInput = activeElement
+    const { top: nameInputTop, right: nameInputRight } = nameInput.getBoundingClientRect()
 
-    const activeElementPadding = getComputedStyle(activeElement).padding as `${number}px`
-    const activeElementPaddingToNumber = convertPixelStringToNumber(activeElementPadding)
+    const nameInputTopToNumber = parseInt(getComputedStyle(nameInput).paddingTop, 10);
+    const nameInputLeftToNumber = parseInt(getComputedStyle(nameInput).paddingLeft, 10);
+    const nameInputRightToNumber = parseInt(getComputedStyle(nameInput).paddingRight, 10);
 
-    sortFormElement.style.top = convertNumberToPixelString(
-      nameInputBottom +
-      MARGIN_BLOCK -
-      activeElementPaddingToNumber
-    )
-    sortFormElement.style.left = convertNumberToPixelString(
+    sortFormWrapper.style.top = convertNumberToPixelString(nameInputTop + nameInputTopToNumber)
+    sortFormWrapper.style.marginRight = convertNumberToPixelString(nameInputRightToNumber)
+    sortFormWrapper.style.left = convertNumberToPixelString(
       nameInputRight -
-      sortFormElement.getBoundingClientRect().width -
-      activeElementPaddingToNumber +
-      MARGIN_INLINE
+      sortFormWrapper.getBoundingClientRect().width -
+      nameInputLeftToNumber
     )
   }
 }

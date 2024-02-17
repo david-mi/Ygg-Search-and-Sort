@@ -13,7 +13,6 @@ export function bindEvents() {
 
   searchForms.forEach((searchForm) => {
     searchForm.addEventListener("submit", handleFormSubmit)
-
     const nameInput = getSearchFormNameInput(searchForm)
     nameInput.addEventListener("focus", handleNameInputFocus)
     nameInput.addEventListener("blur", handleNameInputBlur)

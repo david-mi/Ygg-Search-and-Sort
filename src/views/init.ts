@@ -1,7 +1,7 @@
-import { sortFormElement } from "./components/sortForm/sortForm"
+import { sortFormWrapper } from "./components/sortForm/sortForm"
 import { bindEvents } from "./bind"
 
 export function initViews() {
-  document.body.append(sortFormElement)
+  document.body.append(sortFormWrapper)
   bindEvents()
 }

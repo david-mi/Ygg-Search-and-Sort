@@ -1,7 +1,7 @@
-import { positionSortFormRelativeToNameInput } from "../../views/helpers/positionSortFormRelativeToNameInput"
+import { positionSortFormWrapperRelativeToNameInput } from "../../views/helpers/positionSortFormRelativeToNameInput"
 
 export function handleNameInputFocus() {
-  positionSortFormRelativeToNameInput()
+  positionSortFormWrapperRelativeToNameInput()
 
-  document.addEventListener("scroll", positionSortFormRelativeToNameInput)
+  document.addEventListener("scroll", positionSortFormWrapperRelativeToNameInput)
 }
