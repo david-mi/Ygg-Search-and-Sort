@@ -4,7 +4,8 @@ import { handleNameInputFocus } from "../handlers/sortForm/nameInputFocus"
 import { getSearchFormNameInput } from "./helpers/getSearchFormNameInput"
 import { handleNameInputBlur } from "../handlers/sortForm/nameInputBlur"
 import { toggleSortFormButton } from "./components/toggleSortFormButton/toggleSortFormButton"
-import { toggleSortFormDisplayMode } from "./helpers/toggleSortFormDisplayMode"
+import { toggleSortFormDisplayMode } from "./helpers/toggleSortForm"
+import { closeSortFormBackground } from "./components/sortForm/sortForm"
 
 export function bindEvents() {
   const searchForms = getSearchForms()
@@ -21,4 +22,5 @@ export function bindEvents() {
   })
 
   toggleSortFormButton.addEventListener("click", toggleSortFormDisplayMode)
+  closeSortFormBackground.addEventListener("click", toggleSortFormDisplayMode)
 }

@@ -15,10 +15,16 @@ export const sortForm = createCustomElement(({
   ]
 }))
 
+export const closeSortFormBackground = createCustomElement(({
+  tagName: "div",
+  attributes: [["class", styles.closeSortFormBackground]]
+}))
+
 export const sortFormWrapper = createCustomElement(({
   tagName: "div",
   attributes: [["class", styles.wrapper]],
   childrens: [
+    closeSortFormBackground,
     toggleSortFormButton,
     sortForm
   ]

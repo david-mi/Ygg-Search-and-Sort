@@ -9,12 +9,20 @@
   height: 20px;
 }
 
+.closeSortFormBackground {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
 .form {
   --spacing: 2rem;
   --ygg-clr-gradient: linear-gradient(180deg, rgba(110, 223, 224, 1) 0%, rgba(101, 221, 176, 1) 100%);
   --ygg-clr-black: #25272f;
   --ygg-clr-background: #25272f;
   --ygg-clr-white: #cbd1da;
+  z-index: 999999;
   background-color: var(--ygg-clr-background);
   font-size: 1rem;
   font-weight: bold;
