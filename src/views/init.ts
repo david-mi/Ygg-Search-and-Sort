@@ -1,10 +1,7 @@
-import { overrideDefaultStyles } from "./helpers/overrideDefaultStyles"
+import { sortFormElement } from "./components/sortForm/sortForm"
 import { bindEvents } from "./bind"
 
 export function initViews() {
-  overrideDefaultStyles()
+  document.body.append(sortFormElement)
   bindEvents()
 }
-
-
-

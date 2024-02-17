@@ -6,7 +6,6 @@
   gap: calc(var(--spacing));
 
   & .orderButton {
-    position: relative !important;
     display: flex;
     padding: calc(var(--spacing) / 5);
     background: var(--ygg-clr-gradient);

@@ -5,7 +5,7 @@ import { createCheckboxInputWrapperElement } from "./shared/checkboxInputWrapper
 import { sortOrderElement } from "./sortOrder/sortOrder"
 
 export const sortFormElement = createCustomElement(({
-  tagName: "div",
+  tagName: "form",
   attributes: [["class", styles.container]],
   childrens: [
     sortTypesElement,

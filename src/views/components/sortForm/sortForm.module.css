@@ -4,9 +4,8 @@
   --ygg-clr-black: #25272f;
   --ygg-clr-background: #25272f;
   --ygg-clr-white: #cbd1da;
-  position: absolute;
-  right: 0;
-  top: calc(100% + 10px);
+  position: fixed;
+  z-index: 999999;
   background-color: var(--ygg-clr-background);
   font-size: 1rem;
   font-weight: bold;
