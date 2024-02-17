@@ -1,8 +1,10 @@
 import { convertNumberToPixelString } from "./convertNumberToPixelString"
 import { sortFormElement } from "../components/sortForm/sortForm"
+import { convertPixelStringToNumber } from "./convertPixelStringToNumber"
 
 export function positionSortFormRelativeToNameInput() {
-  const MARGIN = 0
+  const MARGIN_BLOCK = 15
+  const MARGIN_INLINE = 10
 
   const { activeElement } = document
   const isFocusingNameInput = (
@@ -14,7 +16,19 @@ export function positionSortFormRelativeToNameInput() {
   if (isFocusingNameInput) {
     const { bottom: nameInputBottom, right: nameInputRight } = activeElement.getBoundingClientRect()
 
-    sortFormElement.style.top = convertNumberToPixelString(nameInputBottom + MARGIN)
-    sortFormElement.style.left = convertNumberToPixelString(nameInputRight - sortFormElement.getBoundingClientRect().width + MARGIN)
+    const activeElementPadding = getComputedStyle(activeElement).padding as `${number}px`
+    const activeElementPaddingToNumber = convertPixelStringToNumber(activeElementPadding)
+
+    sortFormElement.style.top = convertNumberToPixelString(
+      nameInputBottom +
+      MARGIN_BLOCK -
+      activeElementPaddingToNumber
+    )
+    sortFormElement.style.left = convertNumberToPixelString(
+      nameInputRight -
+      sortFormElement.getBoundingClientRect().width -
+      activeElementPaddingToNumber +
+      MARGIN_INLINE
+    )
   }
 }
