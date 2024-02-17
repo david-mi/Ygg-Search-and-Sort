@@ -11,11 +11,12 @@
     padding-inline-end: var(--spacing);
     white-space: nowrap;
     color: var(--ygg-clr-white);
+    font-weight: 500;
   }
 
   & input[type="checkbox"] {
-    height: 18px;
-    width: 18px;
+    height: 15px;
+    width: 15px;
     cursor: pointer;
   }
 }

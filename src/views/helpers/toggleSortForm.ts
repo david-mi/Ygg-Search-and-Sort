@@ -4,9 +4,9 @@ import { toggleCloseSortFormBackgroundDisplayMode } from "./toggleSortFormCloseB
 export function toggleSortFormDisplayMode() {
   const currentSortFormDisplayValue = sortForm.style.display
 
-  sortForm.style.display = currentSortFormDisplayValue === "grid"
+  sortForm.style.display = currentSortFormDisplayValue === "flex"
     ? "none"
-    : "grid"
+    : "flex"
 
   toggleCloseSortFormBackgroundDisplayMode()
 }

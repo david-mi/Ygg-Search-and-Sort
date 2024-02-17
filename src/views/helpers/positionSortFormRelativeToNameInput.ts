@@ -10,13 +10,14 @@ export function positionSortFormWrapperRelativeToNameInput() {
   )
 
   if (isFocusingNameInput) {
-    const nameInput = activeElement
+    const nameInput = activeElement as HTMLInputElement
     const { top: nameInputTop, right: nameInputRight } = nameInput.getBoundingClientRect()
 
     const nameInputTopToNumber = parseInt(getComputedStyle(nameInput).paddingTop, 10);
     const nameInputLeftToNumber = parseInt(getComputedStyle(nameInput).paddingLeft, 10);
     const nameInputRightToNumber = parseInt(getComputedStyle(nameInput).paddingRight, 10);
 
+    nameInput.style.paddingRight = "20px"
     sortFormWrapper.style.top = convertNumberToPixelString(nameInputTop + nameInputTopToNumber)
     sortFormWrapper.style.marginRight = convertNumberToPixelString(nameInputRightToNumber)
     sortFormWrapper.style.left = convertNumberToPixelString(

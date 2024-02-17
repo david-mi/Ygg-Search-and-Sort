@@ -7,7 +7,7 @@
 
   & .orderButton {
     display: flex;
-    padding: calc(var(--spacing) / 5);
+    padding: 1px;
     background: var(--ygg-clr-gradient);
   }
 }
