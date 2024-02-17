@@ -3,11 +3,11 @@ import { createCustomElement } from "../../utils/createCustomElement"
 import { sortTypesElement } from "./sortTypes/sortTypes"
 import { createCheckboxInputWrapperElement } from "./shared/checkboxInputWrapper/checkboxInputWrapper"
 import { sortOrderElement } from "./sortOrder/sortOrder"
-import { toogleSortFormButton } from "../toggleSortFormButton/toggleSortFormButton"
+import { toggleSortFormButton } from "../toggleSortFormButton/toggleSortFormButton"
 
 export const sortForm = createCustomElement(({
   tagName: "form",
-  attributes: [["class", styles.container]],
+  attributes: [["class", styles.form]],
   childrens: [
     sortTypesElement,
     createCheckboxInputWrapperElement({ name: "auto_toogle", label: "Auto-toggle" }),
@@ -19,7 +19,7 @@ export const sortFormWrapper = createCustomElement(({
   tagName: "div",
   attributes: [["class", styles.wrapper]],
   childrens: [
-    toogleSortFormButton,
+    toggleSortFormButton,
     sortForm
   ]
 }))

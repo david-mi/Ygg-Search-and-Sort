@@ -1,7 +1,7 @@
 import { createCustomElement } from "../../utils/createCustomElement";
 import styles from "./toggleSortFormButton.module.css"
 
-export const toogleSortFormButton = createCustomElement({
+export const toggleSortFormButton = createCustomElement({
   tagName: "button",
   attributes: [["class", styles.button]],
   childrens: [
