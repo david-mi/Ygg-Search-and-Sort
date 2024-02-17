@@ -1,9 +1,7 @@
-
-import { sortFormElement } from "../../views/components/sortForm/sortForm"
 import { positionSortFormRelativeToNameInput } from "../../views/helpers/positionSortFormRelativeToNameInput"
 
-export function handleMainInputFocus(event: FocusEvent) {
-  const nameInput = event.target as HTMLInputElement
+export function handleNameInputFocus() {
+  positionSortFormRelativeToNameInput()
 
-  positionSortFormRelativeToNameInput(sortFormElement, nameInput)
+  document.addEventListener("scroll", positionSortFormRelativeToNameInput)
 }
