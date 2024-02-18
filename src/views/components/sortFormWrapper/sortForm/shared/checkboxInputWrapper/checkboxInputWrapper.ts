@@ -1,4 +1,4 @@
-import { createCustomElement } from "../../../../../utils/createCustomElement"
+import { createCustomElement } from "@utils/createCustomElement"
 import styles from "./checkboxInputWrapper.module.css"
 
 interface CheckBoxWrapperProps {

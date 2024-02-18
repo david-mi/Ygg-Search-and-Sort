@@ -8,6 +8,27 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@handlers/*": [
+        "handlers/*"
+      ],
+      "@views/*": [
+        "views/*"
+      ],
+      "@components/*": [
+        "views/components/*"
+      ],
+      "@shared/*": [
+        "views/components/shared/*"
+      ],
+      "@helpers": [
+        "helpers.ts"
+      ],
+      "@utils/*": [
+        "views/utils/*"
+      ]
+    },
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
@@ -25,5 +46,5 @@
   },
   "include": [
     "src"
-  ]
+  ],
 }

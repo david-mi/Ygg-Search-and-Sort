@@ -1,6 +1,6 @@
 import { toggleSortFormButton } from "../toggleSortFormButton/toggleSortFormButton"
 import { closeSortFormBackground } from "../closeSortFromBackground/closeSortFormBackground"
-import { createCustomElement } from "../../utils/createCustomElement"
+import { createCustomElement } from "@utils/createCustomElement"
 import { sortForm } from "./sortForm/sortForm"
 import styles from "./sortFormWrapper.module.css"
 

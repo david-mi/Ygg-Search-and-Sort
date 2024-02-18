@@ -1,4 +1,4 @@
-import { sortForm } from "../components/sortFormWrapper/sortForm/sortForm";
+import { sortForm } from "@components/sortFormWrapper/sortForm/sortForm";
 import { toggleCloseSortFormBackgroundDisplayMode } from "./toggleSortFormCloseBackgroundDisplayMode";
 
 export function toggleSortFormDisplayMode() {

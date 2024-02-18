@@ -1,4 +1,4 @@
-import { setSearchParamsFromFormData, setSortParams, redirect } from "../helpers"
+import { setSearchParamsFromFormData, redirect, setSortParams } from "@helpers"
 
 export function handleSearchFormSubmit(event: SubmitEvent) {
   event.preventDefault()

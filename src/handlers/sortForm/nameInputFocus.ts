@@ -1,4 +1,4 @@
-import { positionSortFormWrapperRelativeToNameInput } from "../../views/helpers/positionSortFormRelativeToNameInput"
+import { positionSortFormWrapperRelativeToNameInput } from "@views/helpers/positionSortFormRelativeToNameInput"
 
 export function handleNameInputFocus() {
   positionSortFormWrapperRelativeToNameInput()
