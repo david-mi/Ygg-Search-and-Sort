@@ -21,7 +21,8 @@ export default defineConfig({
       userscript: {
         icon: 'https://vitejs.dev/logo.svg',
         namespace: 'npm/vite-plugin-monkey',
-        match: [" https://www3.yggtorrent.qa/*", "https://yggtorrent.qa/*"],
+        match: ["https://www3.yggtorrent.qa/*", "https://yggtorrent.qa/*"],
+        exclude: ["https://www3.yggtorrent.qa/forum/*"]
       },
     }),
   ],
