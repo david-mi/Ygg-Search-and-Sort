@@ -1,6 +1,6 @@
-import { setSearchParamsFromFormData, setSortParams, redirect } from "../../helpers"
+import { setSearchParamsFromFormData, setSortParams, redirect } from "../helpers"
 
-export function handleFormSubmit(event: SubmitEvent) {
+export function handleSearchFormSubmit(event: SubmitEvent) {
   event.preventDefault()
 
   const form = event.target as HTMLFormElement

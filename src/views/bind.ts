@@ -1,5 +1,5 @@
 import { getSearchForms } from "./helpers/getSearchForms"
-import { handleFormSubmit } from "../handlers/sortForm/submit"
+import { handleSearchFormSubmit } from "../handlers/searchFormSubmit"
 import { handleNameInputFocus } from "../handlers/sortForm/nameInputFocus"
 import { getSearchFormNameInput } from "./helpers/getSearchFormNameInput"
 import { handleNameInputBlur } from "../handlers/sortForm/nameInputBlur"
@@ -16,7 +16,7 @@ export function bindEvents() {
   }
 
   searchForms.forEach((searchForm) => {
-    searchForm.addEventListener("submit", handleFormSubmit)
+    searchForm.addEventListener("submit", handleSearchFormSubmit)
     const nameInput = getSearchFormNameInput(searchForm)
     nameInput.addEventListener("focus", handleNameInputFocus)
     nameInput.addEventListener("blur", handleNameInputBlur)
