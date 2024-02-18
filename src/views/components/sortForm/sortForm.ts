@@ -4,13 +4,15 @@ import { sortTypesElement } from "./sortTypes/sortTypes"
 import { } from "./shared/checkboxInputWrapper/checkboxInputWrapper"
 import { sortOrderElement } from "./sortOrder/sortOrder"
 import { toggleSortFormButton } from "../toggleSortFormButton/toggleSortFormButton"
+import { closeSortFormButton } from "./closeButton/closeButton"
 
 export const sortForm = createCustomElement(({
   tagName: "form",
   attributes: [["class", styles.form]],
   childrens: [
     sortTypesElement,
-    sortOrderElement
+    sortOrderElement,
+    closeSortFormButton
   ]
 }))
 
