@@ -1,10 +1,10 @@
 import styles from "./sortForm.module.css"
 import { createCustomElement } from "../../utils/createCustomElement"
 import { sortTypesElement } from "./sortTypes/sortTypes"
-import { } from "./shared/checkboxInputWrapper/checkboxInputWrapper"
 import { sortOrderElement } from "./sortOrder/sortOrder"
 import { toggleSortFormButton } from "../toggleSortFormButton/toggleSortFormButton"
 import { closeSortFormButton } from "./closeButton/closeButton"
+import { closeSortFormBackground } from "../closeSortFromBackground/closeSortFormBackground"
 
 export const sortForm = createCustomElement(({
   tagName: "form",
@@ -14,11 +14,6 @@ export const sortForm = createCustomElement(({
     sortOrderElement,
     closeSortFormButton
   ]
-}))
-
-export const closeSortFormBackground = createCustomElement(({
-  tagName: "div",
-  attributes: [["class", styles.closeSortFormBackground]]
 }))
 
 export const sortFormWrapper = createCustomElement(({

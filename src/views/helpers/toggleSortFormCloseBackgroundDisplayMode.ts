@@ -1,4 +1,4 @@
-import { closeSortFormBackground } from "../components/sortForm/sortForm";
+import { closeSortFormBackground } from "../components/closeSortFromBackground/closeSortFormBackground"
 
 export function toggleCloseSortFormBackgroundDisplayMode() {
   const currentCloseFormBackgroundDisplayMode = closeSortFormBackground.style.display
