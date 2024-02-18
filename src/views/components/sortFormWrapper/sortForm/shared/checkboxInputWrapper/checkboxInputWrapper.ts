@@ -1,4 +1,4 @@
-import { createCustomElement } from "../../../../utils/createCustomElement"
+import { createCustomElement } from "../../../../../utils/createCustomElement"
 import styles from "./checkboxInputWrapper.module.css"
 
 interface CheckBoxWrapperProps {
@@ -9,7 +9,7 @@ interface CheckBoxWrapperProps {
 export function createCheckboxInputWrapperElement({ name, label }: CheckBoxWrapperProps) {
   return createCustomElement((({
     tagName: "div",
-    attributes: [["class", styles.checkboxInputWrapper]],
+    attributes: [["class", styles.container]],
     childrens: [
       `<label for="${name}">${label}</label>`,
       createCustomElement((({

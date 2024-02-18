@@ -1,4 +1,4 @@
-import { createCustomElement } from "../../../utils/createCustomElement"
+import { createCustomElement } from "../../../../utils/createCustomElement"
 import { createCheckboxInputWrapperElement } from "../shared/checkboxInputWrapper/checkboxInputWrapper"
 import styles from "./sortTypes.module.css"
 

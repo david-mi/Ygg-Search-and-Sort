@@ -1,4 +1,4 @@
-import { sortFormWrapper } from "./components/sortForm/sortForm"
+import { sortFormWrapper } from "./components/sortFormWrapper/sortFormWrapper"
 import { bindEvents } from "./bind"
 
 export function initViews() {

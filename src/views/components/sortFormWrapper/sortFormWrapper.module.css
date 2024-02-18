@@ -1,0 +1,10 @@
+.container {
+  position: absolute;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 20px;
+  height: 20px;
+}

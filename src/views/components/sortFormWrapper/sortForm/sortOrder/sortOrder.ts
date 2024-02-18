@@ -1,4 +1,4 @@
-import { createCustomElement } from "../../../utils/createCustomElement"
+import { createCustomElement } from "../../../../utils/createCustomElement"
 import { createArrowSvgHtml } from "./arrowSvg/arrowSvg"
 import styles from "./sortOrder.module.css"
 
