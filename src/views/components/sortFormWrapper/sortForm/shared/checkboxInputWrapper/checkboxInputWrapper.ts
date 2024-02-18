@@ -16,7 +16,8 @@ export function createCheckboxInputWrapperElement({ name, label }: CheckBoxWrapp
         tagName: "input",
         attributes: [
           ["type", "checkbox"],
-          ["name", name],
+          ["name", "orderType"],
+          ["value", name],
           ["id", name]
         ]
       })))

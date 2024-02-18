@@ -13,6 +13,8 @@ export default defineConfig({
       '@shared': resolve(__dirname, './src/views/components/shared'),
       '@helpers': resolve(__dirname, './src/helpers.ts'),
       '@utils': resolve(__dirname, './src/views/utils'),
+      '@controllers': resolve(__dirname, './src/controllers'),
+      '@types': resolve(__dirname, './src/types.ts'),
     },
   },
   plugins: [

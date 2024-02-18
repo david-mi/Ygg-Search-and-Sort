@@ -2,7 +2,6 @@ import { convertNumberToPixelString } from "./convertNumberToPixelString"
 import { sortFormWrapper } from "@components/sortFormWrapper/sortFormWrapper"
 
 export function positionSortFormWrapperRelativeToNameInput() {
-  console.log("focus")
   const { activeElement } = document
   const isFocusingNameInput = (
     activeElement &&

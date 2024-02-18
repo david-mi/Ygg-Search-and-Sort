@@ -5,6 +5,8 @@ import { toggleSortFormDisplayMode } from "./helpers/toggleSortForm"
 import { closeSortFormButton } from "./components/sortFormWrapper/sortForm/closeButton/closeButton"
 import { sortFormWrapper } from "./components/sortFormWrapper/sortFormWrapper"
 import { positionSortFormWrapperRelativeToNameInput } from "./helpers/positionSortFormRelativeToNameInput"
+import { sortTypesCheckboxes } from "./components/sortFormWrapper/sortForm/sortTypes/sortTypes"
+import { handleSortTypeCheckboxChange } from "@handlers/sortForm/sortTypeCheckboxChange"
 
 export function bindEvents(searchForms: NodeListOf<HTMLFormElement>) {
   searchForms.forEach((searchForm) => {
@@ -17,4 +19,7 @@ export function bindEvents(searchForms: NodeListOf<HTMLFormElement>) {
   toggleSortFormButton.addEventListener("click", toggleSortFormDisplayMode)
   closeSortFormButton.addEventListener("click", toggleSortFormDisplayMode)
   sortFormWrapper.addEventListener("click", event => event.stopPropagation())
+  sortTypesCheckboxes.forEach((sortTypesCheckbox) => {
+    sortTypesCheckbox.addEventListener("change", handleSortTypeCheckboxChange)
+  })
 }

@@ -27,6 +27,12 @@
       ],
       "@utils/*": [
         "views/utils/*"
+      ],
+      "@controllers/*": [
+        "controllers/*"
+      ],
+      "@types": [
+        "types.ts"
       ]
     },
     "moduleResolution": "Node",
