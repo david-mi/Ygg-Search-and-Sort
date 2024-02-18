@@ -1,4 +1,10 @@
+export type LocalStorageSortKey = "sortParams"
+
+export type SortType = "name" | "comments" | "publish_date" | "size" | "completed" | "seed" | "leech";
+
+export type SortOrder = "asc" | "desc"
+
 export interface SortParams {
-  order: "asc" | "desc",
-  type: "seed"
+  order: SortOrder,
+  type: SortType
 }
