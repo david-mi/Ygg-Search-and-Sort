@@ -5,8 +5,8 @@ import { getSearchFormNameInput } from "./helpers/getSearchFormNameInput"
 import { handleNameInputBlur } from "@handlers/sortForm/nameInputBlur"
 import { toggleSortFormButton } from "./components/toggleSortFormButton/toggleSortFormButton"
 import { toggleSortFormDisplayMode } from "./helpers/toggleSortForm"
-import { closeSortFormBackground } from "./components/closeSortFromBackground/closeSortFormBackground"
 import { closeSortFormButton } from "./components/sortFormWrapper/sortForm/closeButton/closeButton"
+import { sortFormWrapper } from "./components/sortFormWrapper/sortFormWrapper"
 
 export function bindEvents() {
   const searchForms = getSearchForms()
@@ -20,9 +20,10 @@ export function bindEvents() {
     const nameInput = getSearchFormNameInput(searchForm)
     nameInput.addEventListener("focus", handleNameInputFocus)
     nameInput.addEventListener("blur", handleNameInputBlur)
+    nameInput.addEventListener("click", (event) => event.stopPropagation())
   })
 
   toggleSortFormButton.addEventListener("click", toggleSortFormDisplayMode)
-  closeSortFormBackground.addEventListener("click", toggleSortFormDisplayMode)
   closeSortFormButton.addEventListener("click", toggleSortFormDisplayMode)
+  sortFormWrapper.addEventListener("click", event => event.stopPropagation())
 }
