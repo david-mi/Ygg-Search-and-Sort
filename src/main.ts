@@ -1,4 +1,4 @@
-import { initViews } from "./views/init";
+import { initViews } from "./views/initViews";
 
 (function () {
   console.log("YGG - Auto sort by seed v1.2.0");
