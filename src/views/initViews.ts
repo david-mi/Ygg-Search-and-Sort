@@ -1,6 +1,7 @@
 import { sortFormWrapper } from "./components/sortFormWrapper/sortFormWrapper"
 import { bindEvents } from "./bindEvents"
 import { getSearchForms } from "./helpers/getSearchForms"
+import { getSearchFormNameInput } from "./helpers/getSearchFormNameInput"
 
 export function initViews() {
   document.body.append(sortFormWrapper)
@@ -11,4 +12,7 @@ export function initViews() {
   }
 
   bindEvents(searchForms)
+
+  const mainSearchInput = getSearchFormNameInput(searchForms[0])
+  mainSearchInput.focus()
 }
