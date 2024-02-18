@@ -8,7 +8,7 @@ export function handleSearchFormSubmit(event: SubmitEvent) {
   setSearchParamsFromFormData({ url: actionUrl, formData: new FormData(form) })
   setSortParams({
     url: actionUrl,
-    sortParams: { order: "desc", sortBy: "seed" }
+    sortParams: { order: "desc", type: "seed" }
   })
   redirect(actionUrl)
 }

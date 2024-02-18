@@ -6,7 +6,7 @@ import { closeSortFormButton } from "./closeButton/closeButton"
 
 export const sortForm = createCustomElement(({
   tagName: "form",
-  attributes: [["class", styles.form]],
+  attributes: [["class", styles.sortForm]],
   childrens: [
     sortTypesElement,
     sortOrderElement,

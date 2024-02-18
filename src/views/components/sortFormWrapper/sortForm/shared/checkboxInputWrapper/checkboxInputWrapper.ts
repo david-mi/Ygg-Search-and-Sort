@@ -9,7 +9,7 @@ interface CheckBoxWrapperProps {
 export function createCheckboxInputWrapperElement({ name, label }: CheckBoxWrapperProps) {
   return createCustomElement((({
     tagName: "div",
-    attributes: [["class", styles.container]],
+    attributes: [["class", styles.checkboxInputWrapper]],
     childrens: [
       `<label for="${name}">${label}</label>`,
       createCustomElement((({

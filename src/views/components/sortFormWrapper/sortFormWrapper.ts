@@ -5,7 +5,7 @@ import styles from "./sortFormWrapper.module.css"
 
 export const sortFormWrapper = createCustomElement(({
   tagName: "div",
-  attributes: [["class", styles.container]],
+  attributes: [["class", styles.sortFormWrapper]],
   childrens: [
     toggleSortFormButton,
     sortForm
