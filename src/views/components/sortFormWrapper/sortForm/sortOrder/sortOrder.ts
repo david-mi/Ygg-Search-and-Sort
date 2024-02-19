@@ -19,6 +19,7 @@ export const orderButtons = [
       ["class", styles.orderButton],
       ["type", "button"],
       ["data-sort", "desc"],
+      ["data-active", ""],
       ["disabled", ""]
     ],
     childrens: [createArrowSvgHtml("down")]
