@@ -1,7 +1,5 @@
-import type { LocalStorageSortKey } from "types"
+import { LOCAL_STORAGE_KEYS } from "@controllers/constants"
 
 export function removeStorageSortParameters() {
-  const key: LocalStorageSortKey = "sortParams"
-
-  localStorage.removeItem(key)
+  localStorage.removeItem(LOCAL_STORAGE_KEYS.SORT_PARAMS)
 }

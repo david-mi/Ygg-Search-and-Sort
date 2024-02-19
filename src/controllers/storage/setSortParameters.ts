@@ -1,7 +1,9 @@
-import type { LocalStorageSortKey, SortParams } from "types"
+import type { SortParams } from "types"
+import { LOCAL_STORAGE_KEYS } from "@controllers/constants"
 
 export function setStorageSortParameters(sortParameters: SortParams) {
-  const key: LocalStorageSortKey = "sortParams"
-
-  localStorage.setItem(key, JSON.stringify(sortParameters))
+  localStorage.setItem(
+    LOCAL_STORAGE_KEYS.SORT_PARAMS,
+    JSON.stringify(sortParameters)
+  )
 }

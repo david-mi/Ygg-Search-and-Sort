@@ -1,8 +1,9 @@
-import type { LocalStorageSortKey, SortParams } from "types";
+import type { SortParams } from "types";
+import { LOCAL_STORAGE_KEYS } from "@controllers/constants";
 
 export function getStorageSortParameters() {
-  const key: LocalStorageSortKey = "sortParams"
-
-  const sortParametersFromStorage = localStorage.getItem(key)
-  return sortParametersFromStorage ? JSON.parse(sortParametersFromStorage) as SortParams : null;
+  const sortParametersFromStorage = localStorage.getItem(LOCAL_STORAGE_KEYS.SORT_PARAMS)
+  return sortParametersFromStorage !== null
+    ? JSON.parse(sortParametersFromStorage) as SortParams
+    : null;
 }
