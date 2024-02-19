@@ -1,3 +1,7 @@
+import { getStorageSortParameters } from "@controllers/storage/getSortParameters"
+import { setStorageSortParameters } from "@controllers/storage/setSortParameters"
+import type { SortOrder, SortParams } from "@types"
+
 function handleNonClickedOrderButton(clickedOrderButton: HTMLButtonElement, activeAttribute: string) {
   const clickedOrderButtonParentElement = clickedOrderButton.parentElement as HTMLDivElement
   const currentActiveOrderButton = clickedOrderButtonParentElement.querySelector(`[${activeAttribute}]`)
@@ -18,4 +22,12 @@ export function handleOrderButtonClick(event: MouseEvent) {
   const orderButton = event.target as HTMLButtonElement
 
   handleButtonsActiveAttribute(orderButton)
+
+  const sortAttribute = "data-sort"
+  const storageSortParameters = getStorageSortParameters() as SortParams
+  setStorageSortParameters({
+    type: storageSortParameters.type,
+    order: orderButton.getAttribute(sortAttribute) as SortOrder
+  })
+
 }
