@@ -1,8 +1,28 @@
 .checkboxInputWrapper {
+  cursor: pointer;
+  --checkbox-input-wrapper-transition: 150ms ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
   row-gap: var(--spacing);
+
+  & * {
+    cursor: pointer;
+  }
+
+  &:has(input:checked) label {
+    color: transparent;
+  }
+
+  &:hover {
+    & label {
+      color: transparent;
+    }
+
+    & input {
+      background: var(--ygg-clr-gradient);
+    }
+  }
 
   & label {
     flex: 1;
@@ -10,13 +30,11 @@
     align-items: center;
     padding-inline-end: var(--spacing);
     white-space: nowrap;
-    color: var(--ygg-clr-white);
     font-weight: 500;
-  }
-
-  & input[type="checkbox"] {
-    height: 15px;
-    width: 15px;
-    cursor: pointer;
+    color: var(--ygg-clr-white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: var(--ygg-clr-gradient-horizontal);
+    transition: color var(--checkbox-input-wrapper-transition);
   }
 }

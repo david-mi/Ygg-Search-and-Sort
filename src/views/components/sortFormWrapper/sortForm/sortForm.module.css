@@ -1,6 +1,7 @@
 .sortForm {
   --spacing: 1.6rem;
-  --ygg-clr-gradient: linear-gradient(180deg, rgba(110, 223, 224, 1) 0%, rgba(101, 221, 176, 1) 100%);
+  --ygg-clr-gradient: linear-gradient(180deg, #6edfe0 0%, #65ddb0 100%);
+  --ygg-clr-gradient-horizontal: linear-gradient(90deg, #6edfe0 0%, #65ddb0 100%);
   --ygg-clr-black: #25272f;
   --ygg-clr-background: #25272f;
   --ygg-clr-white: #cbd1da;

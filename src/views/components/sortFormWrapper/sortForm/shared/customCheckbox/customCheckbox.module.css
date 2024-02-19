@@ -1,0 +1,41 @@
+.customCheckboxWrapper {
+  box-sizing: content-box;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  .customCheckbox {
+    cursor: pointer;
+    position: relative;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    inset: 0;
+    margin: 0;
+    background: var(--ygg-clr-white);
+    height: 15px;
+    width: 15px;
+
+    &:checked {
+      background: var(--ygg-clr-gradient);
+
+      & + .svg {
+        opacity: 1;
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  & .svg {
+    opacity: 0;
+    transform: scale(0.2);
+    position: absolute;
+    transition: 300ms ease-out;
+    pointer-events: none;
+
+    & path {
+      fill: var(--ygg-clr-black);
+    }
+  }
+}
