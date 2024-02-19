@@ -4,7 +4,11 @@
   width: 25px;
   height: 25px;
 
-  &.down {
+  &.asc {
+    rotate: 0deg;
+  }
+
+  &.desc {
     rotate: 180deg;
   }
 

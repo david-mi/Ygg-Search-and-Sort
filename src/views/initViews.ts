@@ -4,7 +4,7 @@ import { getSearchForms } from "./helpers/getSearchForms"
 import { getSearchFormNameInput } from "./helpers/getSearchFormNameInput"
 import { setOrderButtonsDisplayMode } from "./setOrderButtonsDisplayMode"
 import { setSortOrderButtonsAttributes } from "./setSortOrderButtonsAttributes"
-import { setSortTypeCheckboxesAttributes } from "./setSortTypeCheckboxesAttributes"
+import { setSortTypesCheckboxesAttributes } from "./setSortTypesCheckboxesAttributes"
 
 export function initViews() {
   document.body.append(sortFormWrapper)
@@ -14,9 +14,9 @@ export function initViews() {
     return console.error({ YggCustomScriptError: "Aucun formulaire de recherche trouvé" })
   }
 
-  setOrderButtonsDisplayMode()
+  setSortTypesCheckboxesAttributes()
   setSortOrderButtonsAttributes()
-  setSortTypeCheckboxesAttributes()
+  setOrderButtonsDisplayMode()
   bindEvents(searchForms)
 
   const mainSearchInput = getSearchFormNameInput(searchForms[0])

@@ -1,9 +1,8 @@
 import styles from "./arrowSvg.module.css"
+import type { SortOrder } from "@types"
 
-type ArrowDirection = "up" | "down"
-
-export function createArrowSvgHtml(direction: ArrowDirection) {
-  const classNames = `${styles.arrowSvg} ${styles[direction]}`
+export function createArrowSvgHtml(sortOrder: SortOrder) {
+  const classNames = `${styles.arrowSvg} ${styles[sortOrder]}`
 
   return `
   <svg xmlns="http://www.w3.org/2000/svg" class="${classNames}" viewBox="0 0 24 24">

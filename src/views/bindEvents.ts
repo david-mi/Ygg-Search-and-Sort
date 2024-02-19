@@ -7,7 +7,7 @@ import { sortFormWrapper } from "./components/sortFormWrapper/sortFormWrapper"
 import { positionSortFormWrapperRelativeToNameInput } from "./helpers/positionSortFormRelativeToNameInput"
 import { sortTypesCheckboxes } from "./components/sortFormWrapper/sortForm/sortTypes/sortTypes"
 import { handleSortTypeCheckboxChange } from "@handlers/sortForm/sortTypeCheckboxChange"
-import { orderButtons } from "./components/sortFormWrapper/sortForm/sortOrder/sortOrder"
+import { sortOrderButtons } from "./components/sortFormWrapper/sortForm/sortOrder/sortOrder"
 import { handleOrderButtonClick } from "@handlers/sortForm/orderButtonClick"
 
 export function bindEvents(searchForms: NodeListOf<HTMLFormElement>) {
@@ -24,7 +24,7 @@ export function bindEvents(searchForms: NodeListOf<HTMLFormElement>) {
   sortTypesCheckboxes.forEach((sortTypesCheckbox) => {
     sortTypesCheckbox.addEventListener("change", handleSortTypeCheckboxChange)
   })
-  orderButtons.forEach((orderButton) => {
+  sortOrderButtons.forEach((orderButton) => {
     orderButton.addEventListener("click", handleOrderButtonClick)
   })
 }

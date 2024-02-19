@@ -1,0 +1,27 @@
+& .sortOrderButton {
+  position: relative;
+  display: flex;
+  padding: 1px;
+  background: var(--ygg-clr-white);
+
+  &:disabled {
+    display: none;
+  }
+
+  &::before {
+    opacity: 0;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--ygg-clr-gradient);
+    transition: opacity 300ms;
+  }
+
+  &[data-active] {
+    background: var(--ygg-clr-gradient);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
