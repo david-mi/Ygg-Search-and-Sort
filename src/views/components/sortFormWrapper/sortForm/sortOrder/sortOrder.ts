@@ -2,24 +2,29 @@ import { createCustomElement } from "@views/utils/createCustomElement"
 import { createArrowSvgHtml } from "./arrowSvg/arrowSvg"
 import styles from "./sortOrder.module.css"
 
-const ascendantOrderButton = createCustomElement({
-  tagName: "button",
-  attributes: [
-    ["class", styles.orderButton]
-  ],
-  childrens: [createArrowSvgHtml("up")]
-})
-
-const descendantOrderButton = createCustomElement({
-  tagName: "button",
-  attributes: [
-    ["class", styles.orderButton]
-  ],
-  childrens: [createArrowSvgHtml("down")]
-})
+export const orderButtons = [
+  createCustomElement({
+    tagName: "button",
+    attributes: [
+      ["class", styles.orderButton],
+      ["type", "button"],
+      ["data-sort", "asc"]
+    ],
+    childrens: [createArrowSvgHtml("up")]
+  }),
+  createCustomElement({
+    tagName: "button",
+    attributes: [
+      ["class", styles.orderButton],
+      ["type", "button"],
+      ["data-sort", "desc"]
+    ],
+    childrens: [createArrowSvgHtml("down")]
+  })
+]
 
 export const sortOrderElement = createCustomElement({
   tagName: "div",
   attributes: [["class", styles.sortOrder]],
-  childrens: [ascendantOrderButton, descendantOrderButton]
+  childrens: orderButtons
 })
