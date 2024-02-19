@@ -11,7 +11,7 @@ function uncheckNonTargetCheckboxes(targetCheckbox: HTMLInputElement) {
   })
 }
 
-function handleOrderButtonsDisplay() {
+export function handleOrderButtonsDisplay() {
   const haveTypeSelected = sortTypesCheckboxes.some((sortTypeCheckbox) => sortTypeCheckbox.checked)
   orderButtons.forEach((orderButton) => orderButton.disabled = !haveTypeSelected)
 }
