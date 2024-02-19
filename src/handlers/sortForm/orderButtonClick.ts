@@ -23,7 +23,7 @@ export function handleOrderButtonClick(event: MouseEvent) {
 
   handleButtonsActiveAttribute(orderButton)
 
-  const sortAttribute = "data-sort"
+  const sortAttribute = "data-order"
   const storageSortParameters = getStorageSortParameters() as SortParams
   setStorageSortParameters({
     type: storageSortParameters.type,
