@@ -1,21 +1,20 @@
 import { getStorageSortParameters } from "@controllers/storage/getSortParameters"
 import { setStorageSortParameters } from "@controllers/storage/setSortParameters"
 import type { SortOrder, SortParams } from "@types"
+import { SORT_BUTTON_DATA_ATTRIBUTES } from "@views/constants"
 
-function handleNonClickedOrderButton(clickedOrderButton: HTMLButtonElement, activeAttribute: string) {
+function handleNonClickedOrderButton(clickedOrderButton: HTMLButtonElement) {
   const clickedOrderButtonParentElement = clickedOrderButton.parentElement as HTMLDivElement
-  const currentActiveOrderButton = clickedOrderButtonParentElement.querySelector(`[${activeAttribute}]`)
+  const currentActiveOrderButton = clickedOrderButtonParentElement.querySelector(`[${SORT_BUTTON_DATA_ATTRIBUTES.ACTIVE}]`)
 
   if (currentActiveOrderButton) {
-    currentActiveOrderButton.removeAttribute(activeAttribute)
+    currentActiveOrderButton.removeAttribute(SORT_BUTTON_DATA_ATTRIBUTES.ACTIVE)
   }
 }
 
 function handleButtonsActiveAttribute(targetButton: HTMLButtonElement) {
-  const activeAttribute = "data-active"
-
-  handleNonClickedOrderButton(targetButton, activeAttribute)
-  targetButton.setAttribute(activeAttribute, "")
+  handleNonClickedOrderButton(targetButton)
+  targetButton.setAttribute(SORT_BUTTON_DATA_ATTRIBUTES.ACTIVE, "")
 }
 
 export function handleOrderButtonClick(event: MouseEvent) {
@@ -23,11 +22,10 @@ export function handleOrderButtonClick(event: MouseEvent) {
 
   handleButtonsActiveAttribute(orderButton)
 
-  const sortAttribute = "data-order"
   const storageSortParameters = getStorageSortParameters() as SortParams
   setStorageSortParameters({
     type: storageSortParameters.type,
-    order: orderButton.getAttribute(sortAttribute) as SortOrder
+    order: orderButton.getAttribute(SORT_BUTTON_DATA_ATTRIBUTES.ORDER) as SortOrder
   })
 
 }

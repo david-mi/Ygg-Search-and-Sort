@@ -1,5 +1,6 @@
 import { createCustomElement } from "@views/utils/createCustomElement"
 import { createArrowSvgHtml } from "./arrowSvg/arrowSvg"
+import { SORT_BUTTON_DATA_ATTRIBUTES } from "@views/constants"
 import styles from "./sortOrder.module.css"
 
 export const orderButtons = [
@@ -8,7 +9,7 @@ export const orderButtons = [
     attributes: [
       ["class", styles.orderButton],
       ["type", "button"],
-      ["data-order", "asc"],
+      [SORT_BUTTON_DATA_ATTRIBUTES.ORDER, "asc"],
       ["disabled", ""]
     ],
     childrens: [createArrowSvgHtml("up")]
@@ -18,8 +19,8 @@ export const orderButtons = [
     attributes: [
       ["class", styles.orderButton],
       ["type", "button"],
-      ["data-order", "desc"],
-      ["data-active", ""],
+      [SORT_BUTTON_DATA_ATTRIBUTES.ORDER, "desc"],
+      [SORT_BUTTON_DATA_ATTRIBUTES.ACTIVE, ""],
       ["disabled", ""]
     ],
     childrens: [createArrowSvgHtml("down")]
