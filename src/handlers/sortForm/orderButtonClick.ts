@@ -1,18 +1,21 @@
-function handleNonClickedOrderButton(clickedOrderButton: HTMLButtonElement, attributeToRemove: string) {
+function handleNonClickedOrderButton(clickedOrderButton: HTMLButtonElement, activeAttribute: string) {
   const clickedOrderButtonParentElement = clickedOrderButton.parentElement as HTMLDivElement
-  const currentActiveOrderButton = clickedOrderButtonParentElement.querySelector(`[${attributeToRemove}]`)
+  const currentActiveOrderButton = clickedOrderButtonParentElement.querySelector(`[${activeAttribute}]`)
 
-  if (currentActiveOrderButton?.contains(clickedOrderButton) === false) {
-    currentActiveOrderButton.removeAttribute(attributeToRemove)
+  if (currentActiveOrderButton) {
+    currentActiveOrderButton.removeAttribute(activeAttribute)
   }
 }
 
-export function handleOrderButtonClick(event: MouseEvent) {
+function handleButtonsActiveAttribute(targetButton: HTMLButtonElement) {
   const activeAttribute = "data-active"
+
+  handleNonClickedOrderButton(targetButton, activeAttribute)
+  targetButton.setAttribute(activeAttribute, "")
+}
+
+export function handleOrderButtonClick(event: MouseEvent) {
   const orderButton = event.target as HTMLButtonElement
 
-  handleNonClickedOrderButton(orderButton, activeAttribute)
-
-
-  orderButton.setAttribute(activeAttribute, "")
+  handleButtonsActiveAttribute(orderButton)
 }

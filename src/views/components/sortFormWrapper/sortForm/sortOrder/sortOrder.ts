@@ -8,7 +8,8 @@ export const orderButtons = [
     attributes: [
       ["class", styles.orderButton],
       ["type", "button"],
-      ["data-sort", "asc"]
+      ["data-sort", "asc"],
+      ["disabled", ""]
     ],
     childrens: [createArrowSvgHtml("up")]
   }),
@@ -17,7 +18,8 @@ export const orderButtons = [
     attributes: [
       ["class", styles.orderButton],
       ["type", "button"],
-      ["data-sort", "desc"]
+      ["data-sort", "desc"],
+      ["disabled", ""]
     ],
     childrens: [createArrowSvgHtml("down")]
   })

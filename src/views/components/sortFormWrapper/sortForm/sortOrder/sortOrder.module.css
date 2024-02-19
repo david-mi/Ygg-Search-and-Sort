@@ -5,11 +5,19 @@
   justify-content: center;
   gap: calc(var(--spacing));
 
+  &:has(button:disabled) {
+    margin-left: calc(var(--spacing) * -1);
+  }
+
   & .orderButton {
     position: relative;
     display: flex;
     padding: 1px;
     background: var(--ygg-clr-white);
+
+    &:disabled {
+      display: none;
+    }
 
     &::before {
       opacity: 0;
