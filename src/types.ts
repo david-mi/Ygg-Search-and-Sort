@@ -2,7 +2,11 @@ export type SortType = "name" | "comments" | "publish_date" | "size" | "complete
 
 export type SortOrder = "asc" | "desc"
 
-export interface SortParams {
+export type SortParams = {
   order: SortOrder,
   type: SortType
+} | null
+
+export interface StoreData {
+  sortParams: SortParams | null
 }

@@ -1,3 +1,3 @@
-export const LOCAL_STORAGE_KEYS = {
+export const STORE_KEYS = {
   SORT_PARAMS: "sortParams"
 }

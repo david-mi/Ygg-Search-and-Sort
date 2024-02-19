@@ -37,6 +37,7 @@
     },
     "moduleResolution": "Node",
     "strict": true,
+    "strictNullChecks": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
