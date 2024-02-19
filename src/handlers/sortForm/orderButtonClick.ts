@@ -1,7 +1,7 @@
 import { Store } from "@controllers/store"
 import type { SortOrder } from "@types"
 import { SORT_BUTTON_DATA_ATTRIBUTES } from "@views/constants"
-import { setSortFormElementsAttributes } from "@views/setAttributes"
+import { setSortOrderButtonsAttributes } from "@views/setSortOrderButtonsAttributes"
 
 export function handleOrderButtonClick(event: MouseEvent) {
   const orderButton = event.target as HTMLButtonElement
@@ -11,5 +11,5 @@ export function handleOrderButtonClick(event: MouseEvent) {
     order: orderButton.getAttribute(SORT_BUTTON_DATA_ATTRIBUTES.ORDER) as SortOrder
   })
 
-  setSortFormElementsAttributes()
+  setSortOrderButtonsAttributes()
 }

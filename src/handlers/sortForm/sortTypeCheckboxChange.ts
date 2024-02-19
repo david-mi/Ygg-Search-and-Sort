@@ -1,25 +1,11 @@
-import { sortTypesCheckboxes } from "@views/components/sortFormWrapper/sortForm/sortTypes/sortTypes"
 import type { SortType } from "types"
-import { orderButtons } from "@views/components/sortFormWrapper/sortForm/sortOrder/sortOrder"
 import { Store } from "@controllers/store"
-
-function uncheckNonTargetCheckboxes(targetCheckbox: HTMLInputElement) {
-  sortTypesCheckboxes.forEach((sortTypesCheckbox) => {
-    if (sortTypesCheckbox.contains(targetCheckbox) === false) {
-      sortTypesCheckbox.checked = false
-    }
-  })
-}
-
-export function handleOrderButtonsDisplay() {
-  const haveTypeSelected = sortTypesCheckboxes.some((sortTypeCheckbox) => sortTypeCheckbox.checked)
-  orderButtons.forEach((orderButton) => orderButton.disabled = !haveTypeSelected)
-}
+import { setOrderButtonsDisplayMode } from "@views/setOrderButtonsDisplayMode"
+import { setSortOrderButtonsAttributes } from "@views/setSortOrderButtonsAttributes"
+import { setSortTypeCheckboxesAttributes } from "@views/setSortTypeCheckboxesAttributes"
 
 export function handleSortTypeCheckboxChange(event: Event) {
   const targetCheckbox = event.target as HTMLInputElement
-  uncheckNonTargetCheckboxes(targetCheckbox)
-  handleOrderButtonsDisplay()
 
   Store.setData(
     "sortParams",
@@ -30,4 +16,8 @@ export function handleSortTypeCheckboxChange(event: Event) {
       }
       : null
   )
+
+  setOrderButtonsDisplayMode()
+  setSortOrderButtonsAttributes()
+  setSortTypeCheckboxesAttributes()
 }
