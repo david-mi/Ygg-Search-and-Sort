@@ -1,0 +1,8 @@
+.customSvgWithGradient {
+  width: 100%;
+  height: 100%;
+
+  & stop {
+    transition: var(--transition);
+  }
+}
