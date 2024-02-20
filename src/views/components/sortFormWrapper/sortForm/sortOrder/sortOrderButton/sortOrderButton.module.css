@@ -2,26 +2,48 @@
   position: relative;
   display: flex;
   padding: 1px;
-  background: var(--ygg-clr-white);
-
-  &:disabled {
-    display: none;
-  }
+  border-radius: 50%;
 
   &::before {
+    border-radius: 50%;
     opacity: 0;
+    transform: scale(0);
     position: absolute;
     content: "";
     inset: 0;
     background: var(--ygg-clr-gradient);
-    transition: opacity 300ms;
+    transition: 300ms;
   }
 
   &[data-active] {
-    background: var(--ygg-clr-gradient);
+    &:hover {
+      & svg stop {
+        stop-color: var(--ygg-clr-dark);
+      }
+    }
+
+    & svg stop {
+      stop-color: var(--ygg-clr-dark);
+    }
 
     &::before {
       opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  & .arrowSvg {
+    pointer-events: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+
+    &.asc {
+      rotate: 0deg;
+    }
+
+    &.desc {
+      rotate: 180deg;
     }
   }
 }
