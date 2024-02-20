@@ -1,0 +1,13 @@
+.customButtonWithSvgGradient {
+  &:hover {
+    & svg stop {
+      &:first-child {
+        stop-color: var(--ygg-clr-gradient-start);
+      }
+
+      &:last-child {
+        stop-color: var(--ygg-clr-gradient-end);
+      }
+    }
+  }
+}

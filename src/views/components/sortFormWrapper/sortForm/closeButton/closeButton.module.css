@@ -2,21 +2,6 @@
   position: absolute;
   top: 0;
   right: 0;
-
-  &:hover {
-    & svg stop {
-      &:first-child {
-        stop-color: var(--ygg-clr-gradient-start);
-      }
-
-      &:last-child {
-        stop-color: var(--ygg-clr-gradient-end);
-      }
-    }
-  }
-
-  & svg {
-    width: 32px;
-    height: 32px;
-  }
+  width: 32px;
+  height: 32px;
 }

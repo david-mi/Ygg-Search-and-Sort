@@ -1,16 +1,4 @@
-.button {
+.toggleSortFormButton {
   width: 100%;
   height: 100%;
-
-  &:hover {
-    & svg stop {
-      &:first-child {
-        stop-color: var(--ygg-clr-gradient-start);
-      }
-
-      &:last-child {
-        stop-color: var(--ygg-clr-gradient-end);
-      }
-    }
-  }
 }

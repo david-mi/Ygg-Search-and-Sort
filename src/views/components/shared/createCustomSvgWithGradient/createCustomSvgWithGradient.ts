@@ -1,6 +1,6 @@
 import styles from "./customSvgWithGradient.module.css"
 
-interface CustomSvgWithGradientProps {
+export interface CustomSvgWithGradientProps {
   paths: string[],
   gradient: {
     orientation: "horizontal" | "vertical"
