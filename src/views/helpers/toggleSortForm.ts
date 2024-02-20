@@ -7,7 +7,7 @@ export function toggleSortFormDisplayMode() {
     sortForm.style.display = "none"
     document.removeEventListener("click", toggleSortFormDisplayMode)
   } else {
-    sortForm.style.display = "flex"
+    sortForm.style.display = "grid"
     document.addEventListener("click", toggleSortFormDisplayMode)
   }
 }

@@ -1,5 +1,4 @@
 .sortTypes {
-  grid-area: sortType;
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing) / 2);

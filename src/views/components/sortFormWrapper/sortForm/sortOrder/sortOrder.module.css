@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   gap: calc(var(--spacing));
-
-  &:has(button:disabled) {
-    margin-left: calc(var(--spacing) * -1);
-  }
+  grid-column: 2;
+  margin-left: var(--spacing);
 }

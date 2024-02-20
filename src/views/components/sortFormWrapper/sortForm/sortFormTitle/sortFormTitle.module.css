@@ -1,0 +1,7 @@
+.sortFormTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  grid-column: span 2;
+  text-align: center;
+  color: var(--ygg-clr-white)
+}
