@@ -1,4 +1,5 @@
-import { setSearchParamsFromFormData, redirect, setSortParams } from "@helpers"
+import { Store } from "@controllers/store"
+import { setSearchParamsFromFormData, redirect, setSortParamsIfExisting } from "@helpers"
 
 export function handleSearchFormSubmit(event: SubmitEvent) {
   event.preventDefault()
@@ -6,9 +7,9 @@ export function handleSearchFormSubmit(event: SubmitEvent) {
   const form = event.target as HTMLFormElement
   const actionUrl = new URL(form.action)
   setSearchParamsFromFormData({ url: actionUrl, formData: new FormData(form) })
-  setSortParams({
+  setSortParamsIfExisting({
     url: actionUrl,
-    sortParams: { order: "desc", type: "seed" }
+    sortParams: Store.sortParams
   })
   redirect(actionUrl)
 }

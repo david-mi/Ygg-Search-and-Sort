@@ -8,9 +8,11 @@ export function setSearchParamsFromFormData({ formData, url }: { formData: FormD
   url.searchParams.set("do", "search")
 }
 
-export function setSortParams({ url, sortParams }: { url: URL, sortParams: SortParams }) {
-  url.searchParams.set("order", sortParams.order)
-  url.searchParams.set("sort", sortParams.type)
+export function setSortParamsIfExisting({ url, sortParams }: { url: URL, sortParams: SortParams }) {
+  if (sortParams !== null) {
+    url.searchParams.set("order", sortParams.order)
+    url.searchParams.set("sort", sortParams.type)
+  }
 }
 
 export function redirect(url: URL) {
