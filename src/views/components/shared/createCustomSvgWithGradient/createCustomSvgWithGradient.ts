@@ -2,11 +2,6 @@ import styles from "./customSvgWithGradient.module.css"
 
 export interface CustomSvgWithGradientProps {
   paths: string[],
-  gradient: {
-    orientation: "horizontal" | "vertical"
-    startColor: string,
-    endColor: string
-  },
   svgClassName?: string
 }
 
@@ -14,7 +9,6 @@ let gradientIdCounter = 0;
 
 export function createCustomSvgWithGradient({
   paths,
-  gradient: { orientation = "vertical", startColor, endColor },
   svgClassName
 }: CustomSvgWithGradientProps) {
   const gradientId = `gradient-${gradientIdCounter++}`;
@@ -35,12 +29,12 @@ export function createCustomSvgWithGradient({
           id="${gradientId}"
           x1="0%"
           y1="0%"
-          x2="${orientation === "horizontal" ? "100%" : "0%"}"
-          y2="${orientation === "vertical" ? "100%" : "0%"}" 
+          x2="0%"
+          y2="100%"
           gradientUnits="userSpaceOnUse"
           >
-          <stop offset="0%" stop-color="${startColor}"/>
-          <stop offset="100%" stop-color="${endColor}"/>
+          <stop offset="0%"/>
+          <stop offset="100%"/>
         </linearGradient>
       </defs>
   </svg>

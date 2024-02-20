@@ -4,5 +4,13 @@
 
   & stop {
     transition: var(--transition);
+
+    &:first-child {
+      stop-color: var(--ygg-clr-white-dark);
+    }
+
+    &:last-child {
+      stop-color: var(--ygg-clr-white-dark);
+    }
   }
 }
