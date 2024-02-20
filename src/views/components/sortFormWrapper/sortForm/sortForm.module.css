@@ -1,12 +1,5 @@
 .sortForm {
-  --spacing: 1.6rem;
-  --ygg-clr-gradient: linear-gradient(180deg, #6edfe0 0%, #65ddb0 100%);
-  --ygg-clr-gradient-horizontal: linear-gradient(90deg, #6edfe0 0%, #65ddb0 100%);
-  --ygg-clr-black: #25272f;
-  --ygg-clr-background: #25272f;
-  --ygg-clr-white: #cbd1da;
   position: relative;
-  z-index: 999999;
   background-color: var(--ygg-clr-background);
   font-size: 1rem;
   font-weight: bold;

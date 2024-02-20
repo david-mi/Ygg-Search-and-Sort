@@ -1,6 +1,5 @@
 .checkboxInputWrapper {
   cursor: pointer;
-  --checkbox-input-wrapper-transition: 150ms ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +34,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     background-image: var(--ygg-clr-gradient-horizontal);
-    transition: color var(--checkbox-input-wrapper-transition);
+    transition: color var(--transition);
   }
 }

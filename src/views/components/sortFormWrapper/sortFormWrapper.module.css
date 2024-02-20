@@ -1,4 +1,14 @@
 .sortFormWrapper {
+  --spacing: 1.6rem;
+  --transition: 200ms ease-in-out;
+  --ygg-clr-gradient-start: #6edfe0;
+  --ygg-clr-gradient-end: #65ddb0;
+  --ygg-clr-gradient: linear-gradient(180deg, var(--ygg-clr-gradient-start) 0%, var(--ygg-clr-gradient-end) 100%);
+  --ygg-clr-gradient-horizontal: linear-gradient(90deg, var(--ygg-clr-gradient-start) 0%, var(--ygg-clr-gradient-end) 100%);
+  --ygg-clr-black: #25272f;
+  --ygg-clr-background: #25272f;
+  --ygg-clr-white: #cbd1da;
+  --ygg-clr-white-dark: #838d8e;
   position: absolute;
   z-index: 999999;
   display: flex;
