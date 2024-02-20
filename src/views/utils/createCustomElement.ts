@@ -1,11 +1,9 @@
-type ElementAttributes = [string, string][]
-
+export type ElementAttributes = [string, string][]
 
 type CreateCustomElementProps<T> = {
   tagName: T
   attributes?: ElementAttributes,
-  childrens?: (HTMLElement | string)[],
-  listeners?: []
+  childrens?: (HTMLElement | string)[]
 }
 
 export function createCustomElement<T extends keyof HTMLElementTagNameMap>(props: CreateCustomElementProps<T>) {
