@@ -1,6 +1,6 @@
 import type { SortType } from "types"
 import { Store } from "@controllers/store"
-import { setOrderButtonsDisplayMode } from "@views/setOrderButtonsDisplayMode"
+import { setOrderElementDisplayMode } from "@views/setOrderElementDisplayMode"
 import { setSortOrderButtonsAttributes } from "@views/setSortOrderButtonsAttributes"
 import { setSortTypesCheckboxesAttributes } from "@views/setSortTypesCheckboxesAttributes"
 
@@ -19,5 +19,5 @@ export function handleSortTypeCheckboxChange(event: Event) {
 
   setSortTypesCheckboxesAttributes()
   setSortOrderButtonsAttributes()
-  setOrderButtonsDisplayMode()
+  setOrderElementDisplayMode()
 }
