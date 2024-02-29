@@ -21,10 +21,13 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
+        version: "1.0.0",
+        name: "YGG - Search and Sort",
         icon: 'https://vitejs.dev/logo.svg',
         namespace: 'npm/vite-plugin-monkey',
         match: ["https://www3.yggtorrent.qa/*", "https://yggtorrent.qa/*"],
-        exclude: ["https://www3.yggtorrent.qa/forum/*"]
+        exclude: ["https://www3.yggtorrent.qa/forum/*"],
+        author: "david-mi",
       },
     }),
   ],
