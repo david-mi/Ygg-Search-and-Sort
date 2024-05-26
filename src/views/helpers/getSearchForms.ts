@@ -1,6 +1,6 @@
 export function formatYggHostname() {
   const { hostname } = location
-  return `www3.${hostname.replace(/.+(?=ygg)/, "")}`
+  return `www.${hostname.replace(/.+(?=ygg)/, "")}`
 }
 
 export function getSearchForms() {
