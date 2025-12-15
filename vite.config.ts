@@ -21,12 +21,12 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
-        version: "1.0.4",
+        version: "1.0.5",
         name: "YGG - Search and Sort",
         icon: "https://cdn.allthepics.net/images/2025/08/14/favicon.png",
         namespace: 'npm/vite-plugin-monkey',
-        match: ["https://www.yggtorrent.top/*"],
-        exclude: ["https://www.yggtorrent.top/forum*"],
+        match: ["https://www.yggtorrent.org/*"],
+        exclude: ["https://www.yggtorrent.org/forum*"],
         author: "david-mi",
       },
       server: {
